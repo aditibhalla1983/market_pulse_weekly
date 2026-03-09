@@ -14,7 +14,7 @@ const SS = "You are a financial content writer for MarketPulse Weekly. Use web_s
 const SG = "You are a technical analyst for MarketPulse Weekly. Use web_search for REAL current price data. Return ONLY raw JSON with a signals array containing one object with fields: ticker, name, direction, current_price, entry, stop_loss, take_profit_1, take_profit_2, risk_reward, setup, key_catalyst. Also a disclaimer field. No markdown. No backticks. Pure JSON only.";
 
 
-function CopyBtn({ getText, label }) {
+function CopyBtn({ getText, label = "Copy" }) {
   const [copied, setCopied] = useState(false);
   function handleCopy() {
     try {
